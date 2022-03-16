@@ -12,30 +12,59 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: mainColor,
-      appBar: AppBar(
-        leading: Icon(
-          Icons.camera_alt_outlined,
-          size: 20,
-        ),
-        titleSpacing: 3,
-        title: Text('Instagram',
-        style:TextStyle(
-          fontFamily: 'Schyler',
-          decoration: TextDecoration.none,
-          fontSize: 20,
-
-        ),
-        ),
-        actions: [
-          IconButton(icon:Icon(Icons.search,
-          size: 30,
-          ), onPressed: (){}),
-        IconButton(
-          icon:Image.asset('assets/images/messenger.png'),
-          onPressed: (){})
+      bottomNavigationBar: BottomAppBar(
+          child: Row(
+        children: [
+          Spacer(),
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {},
+          ),Spacer(),
+          IconButton(
+            icon: Icon(Icons.loupe),
+            onPressed: () {},
+          ),Spacer(),
+          IconButton(
+            icon: Icon(Icons.ondemand_video),
+            onPressed: () {},
+          ),Spacer(),
+          IconButton(
+            icon: Icon(Icons.card_travel),
+            onPressed: () {},
+          ),Spacer(),
+          IconButton(
+            icon: Icon(Icons.person),
+            onPressed: () {},
+          ),Spacer(),
         ],
-      ),
+      )),
+      // backgroundColor: mainColor,
+      // appBar: AppBar(
+      //   leading: Icon(
+      //     Icons.camera_alt_outlined,
+      //     size: 20,
+      //   ),
+      //   titleSpacing: 3,
+      //   title: Text(
+      //     'Instagram',
+      //     style: TextStyle(
+      //       fontFamily: 'Schyler',
+      //       decoration: TextDecoration.none,
+      //       fontSize: 20,
+      //     ),
+      //   ),
+      //   actions: [
+      //     IconButton(
+      //         icon: Icon(
+      //           Icons.search,
+      //           size: 30,
+      //         ),
+      //         onPressed: () {}),
+      //     IconButton(
+      //         icon: Image.network('assets/images/messenger.png'),
+      //         onPressed: () {})
+      //   ],
+      // ),
     );
   }
 }
