@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/components/home_page/home_page.dart';
+import 'package:instagram_clone/home_page/home_page.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -63,33 +63,6 @@ class _HomeScreenState extends State<HomeScreen> {
           Spacer(),
         ],
       )),
-      // backgroundColor: mainColor,
-      // appBar: AppBar(
-      //   leading: Icon(
-      //     Icons.camera_alt_outlined,
-      //     size: 20,
-      //   ),
-      //   titleSpacing: 3,
-      //   title: Text(
-      //     'Instagram',
-      //     style: TextStyle(
-      //       fontFamily: 'Schyler',
-      //       decoration: TextDecoration.none,
-      //       fontSize: 20,
-      //     ),
-      //   ),
-      //   actions: [
-      //     IconButton(
-      //         icon: Icon(
-      //           Icons.search,
-      //           size: 30,
-      //         ),
-      //         onPressed: () {}),
-      //     IconButton(
-      //         icon: Image.network('assets/images/messenger.png'),
-      //         onPressed: () {})
-      //   ],
-      // ),
     );
   }
 }

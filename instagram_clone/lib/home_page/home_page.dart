@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
@@ -9,12 +9,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> profileImages = [
-    "images/1.jpeg"
-        "images/2.jpeg"
-        "images/3.jpeg"
-        "images/4.jpeg"
-        "images/5.jpeg"
-        "images/6.jpeg"
+    "images/0.jpeg",
+    "images/1.jpeg",
+    "images/2.jpeg",
+    "images/3.jpeg",
+    "images/4.jpeg",
+    "images/5.jpeg",
+    "images/4.jpeg",
+    "images/5.jpeg",
+    "images/instagram.jpg"
   ];
 
   @override
@@ -54,10 +57,10 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         children: [
                           CircleAvatar(
+                            backgroundImage: AssetImage("images/instagram.jpg"),
                             radius: 35,
-                            backgroundImage: AssetImage(
-                              "images/6.jpeg",
-                            ),
+                            // backgroundColor:
+                            //     (Color.fromARGB(141, 123, 35, 182)),
                             child: CircleAvatar(
                               radius: 32,
                               backgroundImage: AssetImage(
@@ -67,14 +70,18 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            "Profile Name",
-                            style: TextStyle(fontSize: 12, color: Colors.black),
+                            "Your Story",
+                            style: TextStyle(fontSize: 14, color: Colors.black),
                           )
                         ],
                       ),
                     ),
                   ),
                 ),
+              ),
+              Divider(),
+              Column(
+                children: [],
               )
             ],
           ),

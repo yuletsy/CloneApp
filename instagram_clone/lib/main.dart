@@ -1,8 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/components/home_screen/home_screen.dart';
-import 'package:instagram_clone/components/home_page/home_page.dart';
+import 'package:instagram_clone/home_screen/home_screen.dart';
+import 'package:instagram_clone/home_page/home_page.dart';
 
 void main() {
   runApp(MyApp());
