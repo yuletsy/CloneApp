@@ -81,8 +81,33 @@ class _HomePageState extends State<HomePage> {
               ),
               Divider(),
               Column(
-                children: [],
-              )
+                children: List.generate(8, (index) => Column(
+                  children: [
+                    Row(children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                         child: CircleAvatar(
+                            backgroundImage: AssetImage("images/instagram.jpg"),
+                            radius: 13,
+                            // backgroundColor:
+                            //     (Color.fromARGB(141, 123, 35, 182)),
+                            child: CircleAvatar(
+                              radius: 12,
+                              backgroundImage: AssetImage(
+                                profileImages[index],
+                              ),
+                            ),
+                          ),
+                      ),
+                      Text("Post"),
+                      Spacer(),
+                      IconButton(onPressed: (){}, icon: Icon(Icons.more_vert))
+                    ],)
+                  ],
+                )))
+
+                
+              
             ],
           ),
         ));
