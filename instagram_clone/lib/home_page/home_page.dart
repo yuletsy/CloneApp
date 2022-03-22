@@ -19,6 +19,17 @@ class _HomePageState extends State<HomePage> {
     "images/5.jpeg",
     "images/instagram.jpg"
   ];
+  List<String> posts = [
+       "images/post1.jpeg",
+    "images/post2.jpeg",
+    "images/post3.jpeg",
+    "images/post4.jpeg",
+    "images/post5.jpeg",
+    "images/post6.jpeg",
+    "images/post7.jpeg",
+    "images/post8.jpeg",
+    "images/post9.jpg"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +113,19 @@ class _HomePageState extends State<HomePage> {
                       Text("Post"),
                       Spacer(),
                       IconButton(onPressed: (){}, icon: Icon(Icons.more_vert))
-                    ],)
+                    ],
+                    ),
+                  Image.asset(posts[index]), //image post
+                  Row( //footer post
+                    children: [
+                      IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
+                      IconButton(onPressed: (){}, icon: Icon(Icons.chat_bubble_outline)),
+                      IconButton(onPressed: (){}, icon: Icon(Icons.label_outlined)),
+                      Spacer(),
+                      IconButton(onPressed: (){}, icon: Icon(Icons.bookmark_border_outlined)),
+                    ], 
+
+                  ),
                   ],
                 )))
 
