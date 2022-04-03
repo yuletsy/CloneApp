@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     "images/instagram.jpg"
   ];
   List<String> posts = [
-       "images/post1.jpeg",
+    "images/post1.jpeg",
     "images/post2.jpeg",
     "images/post3.jpeg",
     "images/post4.jpeg",
@@ -92,45 +92,80 @@ class _HomePageState extends State<HomePage> {
               ),
               Divider(),
               Column(
-                children: List.generate(8, (index) => Column(
-                  children: [
-                    Row(children: [
-                      Container(
-                        padding: EdgeInsets.all(10),
-                         child: CircleAvatar(
-                            backgroundImage: AssetImage("images/instagram.jpg"),
-                            radius: 13,
-                            // backgroundColor:
-                            //     (Color.fromARGB(141, 123, 35, 182)),
-                            child: CircleAvatar(
-                              radius: 12,
-                              backgroundImage: AssetImage(
-                                profileImages[index],
+                  children: List.generate(
+                      8,
+                      (index) => Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(10),
+                                    child: CircleAvatar(
+                                      backgroundImage:
+                                          AssetImage("images/instagram.jpg"),
+                                      radius: 13,
+                                      // backgroundColor:
+                                      //     (Color.fromARGB(141, 123, 35, 182)),
+                                      child: CircleAvatar(
+                                        radius: 12,
+                                        backgroundImage: AssetImage(
+                                          profileImages[index],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Text("Post"),
+                                  Spacer(),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(Icons.more_vert))
+                                ],
                               ),
-                            ),
-                          ),
-                      ),
-                      Text("Post"),
-                      Spacer(),
-                      IconButton(onPressed: (){}, icon: Icon(Icons.more_vert))
-                    ],
-                    ),
-                  Image.asset(posts[index]), //image post
-                  Row( //footer post
-                    children: [
-                      IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border)),
-                      IconButton(onPressed: (){}, icon: Icon(Icons.chat_bubble_outline)),
-                      IconButton(onPressed: (){}, icon: Icon(Icons.label_outlined)),
-                      Spacer(),
-                      IconButton(onPressed: (){}, icon: Icon(Icons.bookmark_border_outlined)),
-                    ], 
-
-                  ),
-                  ],
-                )))
-
-                
-              
+                              Image.asset(posts[index]), //image post
+                              Row(
+                                //footer post
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(Icons.favorite_border)),
+                                  Spacer(),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(Icons.chat_bubble_outline)),
+                                  Spacer(),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(Icons.label_outlined)),
+                                  Spacer(),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon:
+                                          Icon(Icons.bookmark_border_outlined)),
+                                ],
+                              ),
+                              Container(
+                                  padding: EdgeInsets.all(15),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      RichText(
+                                          text: TextSpan(
+                                        style: TextStyle(color: Colors.black),
+                                        children: [
+                                          TextSpan(text: 'Liked by'),
+                                          TextSpan(
+                                            text: 'Profile name',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ))
+                                    ],
+                                  )),
+                            ],
+                          )))
             ],
           ),
         ));
